@@ -25,5 +25,15 @@
 	}
 }
 
-.dektop-social {
+.desktop-social {
+	display: flex;
+	align-items: top;
+	a {
+		margin-right: .3rem;
+	}
+
+}
+
+.desktop-clock {
+	margin-left: .3rem;
 }
