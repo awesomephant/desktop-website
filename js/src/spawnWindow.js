@@ -22,6 +22,7 @@ var spawnWindow = function(data){
     el.style.height = data.height + 'px';
     el.style.left = data.x + 'px';
     el.style.top = data.y + 'px';
+    el.style.position = 'absolute';
     document.body.appendChild(el);
 }
 

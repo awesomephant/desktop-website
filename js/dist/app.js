@@ -112,6 +112,7 @@ var spawnWindow = function(data){
     el.style.height = data.height + 'px';
     el.style.left = data.x + 'px';
     el.style.top = data.y + 'px';
+    el.style.position = 'absolute';
     document.body.appendChild(el);
 }
 
@@ -132,8 +133,8 @@ window.setInterval(setTimer, 1000)
 var setClock = function(){
 	var clockEl = document.getElementById('clock')
 	var now = new Date();
-   var h = now.getHours();
-   var m = now.getMinutes();
+   var h = padTime(now.getHours());
+   var m = padTime(now.getMinutes());
 	clockEl.innerHTML = h + ':' + m;
 }
 setClock();
