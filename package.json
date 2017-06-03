@@ -10,6 +10,7 @@
     "grunt-contrib-jshint": "*",
     "grunt-sass": "*",
     "grunt-contrib-watch": "*",
+    "grunt-contrib-concat": "*",
     "grunt-postcss": "*",
     "autoprefixer": "*"
   }

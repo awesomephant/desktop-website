@@ -28,6 +28,15 @@ module.exports = function (grunt) {
                 src: 'css/*.css'
             }
         },
+        concat: {
+            options: {
+                separator: ';',
+            },
+            dist: {
+                src: ['./js/src/window.js', './js/src/timer.js', './js/src/clock.js'],
+                dest: './js/dist/app.js',
+            },
+        },
         browserSync: {
             dev: {
                 bsFiles: {
@@ -43,8 +52,14 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            files: ['./sass/*.scss'],
-            tasks: ['sass', 'postcss']
+            css: {
+                files: ['./sass/*.scss'],
+                tasks: ['sass', 'postcss']
+            }, 
+            js: {
+                files: ['./js/src/*.js'],
+                tasks: ['concat']
+            }
         }
     });
 
@@ -53,8 +68,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     grunt.registerTask('default', ['browserSync', 'watch']);
-    grunt.registerTask('build', ['sass', 'postcss']);
+    grunt.registerTask('build', ['sass', 'postcss', 'concat']);
 
 };
