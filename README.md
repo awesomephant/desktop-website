@@ -2,7 +2,16 @@
 Website for A Nice Pair
 
 ## Development Setup
-Make sure you have grunt-cli installed. If not, run `npm install -g grunt-cli`
+
+Clone this repository by running
+```
+git clone https://github.com/awesomephant/desktop-website.git
+```
+
+Then navigate into the project folder:
+```
+cd desktop-website
+```
 
 Install dependencies using [yarn](https://yarnpkg.com/lang/en/)
 ```
@@ -13,8 +22,9 @@ or npm:
 npm install
 ```
 
-Run
+Start the development server by running
 ```
 grunt
 ```
-to start a local server and watch for changes.
+
+Make sure you have grunt-cli installed. If not, run `npm install -g grunt-cli`
