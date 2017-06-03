@@ -21,8 +21,11 @@ or npm:
 ```
 npm install
 ```
-
-Start the development server by running
+Build the necessary files by running
+```
+grunt build
+```
+You only need to do this once. Then, start the development server by running
 ```
 grunt
 ```
