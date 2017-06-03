@@ -16,6 +16,9 @@ var windows;
 var activeWindow = document.querySelector('.window');
 var handleClose = function (e) {
 	activeWindow.classList.toggle('closed')
+	window.setTimeout(function(){
+		activeWindow.parentNode.removeChild(activeWindow);
+	}, 1000)
 }
 
 var handleMouseX = function (e) {
