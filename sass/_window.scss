@@ -5,6 +5,7 @@
 	border-top: $dragbar-width solid $black;
 	background: white;
 	overflow: hidden;
+	animation: windowIn 500ms ease;
 	box-shadow: -10px 10px 0 0 rgba(black, .2);
 	&.closed {
 		transition: 500ms;

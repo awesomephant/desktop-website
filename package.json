@@ -12,6 +12,7 @@
     "grunt-contrib-watch": "*",
     "grunt-contrib-concat": "*",
     "grunt-postcss": "*",
-    "autoprefixer": "*"
+    "autoprefixer": "*",
+    "css-spring": "*"
   }
 }
