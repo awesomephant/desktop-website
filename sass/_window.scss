@@ -29,9 +29,11 @@
 	top: 100px;
 	width: 540px;
 	height:350px;
-	background: $green;
-	
+	background-color: $green;
+	background-image: url("../assets/wave.svg");
+	animation: waveBackground 60s linear infinite;
 }
+
 .window-countdown {
 	left: 600px;
 	top: 400px;
