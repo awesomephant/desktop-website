@@ -1,0 +1,16 @@
+{
+  "name": "a-nice-pair",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Max Kohler",
+  "license": "MIT",
+  "dependencies": {
+    "grunt": "*",
+    "grunt-browser-sync": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-sass": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-postcss": "*",
+    "autoprefixer": "*"
+  }
+}
