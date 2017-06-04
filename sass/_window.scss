@@ -38,7 +38,15 @@
 	background: $blue;
 	width: 440px;
 	height: 300px;
+}
 
+.window-logo {
+	left: 2rem;
+	top: 500px;
+    left:900px;
+	width: 240px;
+	height: 110px;
+	z-index: 10;
 }
 
 .window-2 {
