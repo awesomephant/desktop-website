@@ -13,6 +13,22 @@
 		transform: scale(0);
 		pointer-events: none;
 	}
+	.icon-exit-fullscreen {
+		display: none;
+	}
+	&.isFullscreen {
+		transition: 200ms;
+		left: 0 !important;
+		top: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+		.icon-enter-fullscreen {
+			display: none;
+		}
+		.icon-exit-fullscreen {
+			display: inline-block;
+		}
+	}
 }
 
 .window-1 {
@@ -80,9 +96,10 @@
 	position: absolute;
 	top: 1px;
 	right: 10px;
+	display: flex;
 }
 
-[class*=window-control]{
+a[class*=window-control]{
 	display: inline-block;
 	height: 100%;
 	line-height: 0;

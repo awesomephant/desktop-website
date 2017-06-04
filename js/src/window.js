@@ -16,9 +16,12 @@ var windows;
 var activeWindow = document.querySelector('.window');
 var handleClose = function (e) {
 	activeWindow.classList.toggle('closed')
-	window.setTimeout(function(){
+	window.setTimeout(function () {
 		activeWindow.parentNode.removeChild(activeWindow);
 	}, 1000)
+}
+var handleFullscreen = function (e) {
+	activeWindow.classList.toggle('isFullscreen')
 }
 
 var handleMouseX = function (e) {
@@ -66,6 +69,10 @@ var initWindow = function (w) {
 	var closeButton = w.querySelector("#close-button");
 	if (closeButton) {
 		closeButton.addEventListener("click", handleClose, false);
+	}
+	var fullscreenButton = w.querySelector("#fullscreen-button");
+	if (fullscreenButton) {
+		fullscreenButton.addEventListener("click", handleFullscreen, false);
 	}
 	w.addEventListener("mousedown", function (e) {
 		activeWindow.style.zIndex = 0;
