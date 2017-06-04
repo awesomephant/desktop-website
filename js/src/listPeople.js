@@ -1,13 +1,15 @@
-var listTemplate = Handlebars.compile('<ul class="people-list">{{#each people}}<li><a href="#1" class="people-list--person">{{this.Name}}</a></li>{{/each}}</ul>')
+var peopleData;
+var listTemplate = Handlebars.compile('<ul class="people-list">{{#each people}}<li><a data-index="{{@index}}" href="#1" class="people-list--person">{{this.Name}}</a></li>{{/each}}</ul>')
 
 var initPeopleList = function (el) {
     var people = el.querySelectorAll('.people-list--person')
     for (var i = 0; i < people.length; i++) {
         var link = people[i];
         link.addEventListener('click', function () {
-            console.log('yoyoyoy')
+            var index = this.getAttribute('data-index');
+            var person = peopleData.people[index];
             spawnWindow({
-                title: 'Person',
+                title: person.Name,
                 content: 'This is a person',
                 x: 500,
                 y: 300,
@@ -21,7 +23,8 @@ var initPeopleList = function (el) {
 fetch('../data/people.json').then(function (response) {
     return response.json();
 }).then(function (data) {
-    var html = listTemplate(data);
+    peopleData = data;
+    var html = listTemplate(peopleData);
     spawnWindow({
         title: 'People',
         content: html,
