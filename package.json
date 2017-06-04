@@ -13,6 +13,7 @@
     "grunt-contrib-concat": "*",
     "grunt-postcss": "*",
     "autoprefixer": "*",
-    "css-spring": "*"
+    "css-spring": "*",
+    "csvtojson": "*"
   }
 }
