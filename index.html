@@ -20,19 +20,19 @@
 
 <body>
     <header class="desktop-header">
-        <div>
-            <h1 class="desktop-title">ANP</h1>
-            <ul class="desktop-nav">
-                <li class='desktop-nav-item' id="spawn-button">About</li>
-                <li class='desktop-nav-item'>Options
-                    <ul class='desktop-subnav'>
-                        <li class='desktop-subnav-item'><a href='#1'>One</a></li>
-                        <li class='desktop-subnav-item'><a href='#1'>Two</a></li>
-                        <li class='desktop-subnav-item'><a href='#1'>Three</a></li>
-                    </ul>
-                </li>
-            </ul>
-            </nav>
+        <div class="desktop-menu">
+        <h1 class="desktop-title">ANP</h1>
+        <ul class="desktop-nav">
+            <li class='desktop-nav-item' id="spawn-button">About</li>
+            <li class='desktop-nav-item active'>Options
+                <ul class='desktop-subnav'>
+                    <li class='desktop-subnav-item'>One</li>
+                    <li class='desktop-subnav-item'>Two</li>
+                    <li class='desktop-subnav-item'>Three</li>
+                </ul>
+            </li>
+        </ul>
+        </nav>
         </div>
         <nav class="desktop-social">
             <a href="https://www.instagram.com/anicepair/" target="_blank">
@@ -70,7 +70,9 @@
         </div>
     </div>
     <div class="window window-logo draggable">
-        <header class="window-header"><h2 class="window-title">logo.BMP</h2></header>
+        <header class="window-header">
+            <h2 class="window-title">logo.BMP</h2>
+        </header>
         <div class='dragbar-right' id="resize-right"></div>
         <div class='dragbar-left' id="resize-left"></div>
         <div class='dragbar-bottom' id="resize-bottom"></div>
