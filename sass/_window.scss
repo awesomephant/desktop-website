@@ -5,12 +5,12 @@
 	border-top: $dragbar-width solid $black;
 	background: white;
 	overflow: hidden;
-	animation: windowIn 500ms ease;
+//	animation: windowIn 500ms ease;
 	box-shadow: -10px 10px 0 0 rgba(black, .2);
 	&.closed {
-		transition: 500ms;
-		opacity: 0;
-		transform: translateY(-100px);
+		opacity: .7;
+//		transition: 300ms;
+		transform: scale(0);
 		pointer-events: none;
 	}
 }
@@ -32,7 +32,7 @@
 	height:350px;
 	background-color: $green;
 	background-image: url("../assets/wave.svg");
-	animation: waveBackground 60s linear infinite;
+//	animation: waveBackground 60s linear infinite;
 }
 
 .window-countdown {
