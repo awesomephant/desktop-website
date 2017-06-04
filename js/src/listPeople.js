@@ -19,11 +19,7 @@ var initPeopleList = function (el) {
         })
     }
 }
-
-fetch('../data/people.json').then(function (response) {
-    return response.json();
-}).then(function (data) {
-    peopleData = data;
+var spawnPeopleWindow = function () {
     var html = listTemplate(peopleData);
     spawnWindow({
         title: 'People',
@@ -34,5 +30,11 @@ fetch('../data/people.json').then(function (response) {
         height: 500,
         init: initPeopleList
     })
+}
 
+fetch('../data/people.json').then(function (response) {
+    return response.json();
+}).then(function (data) {
+    peopleData = data;
+    spawnPeopleWindow();
 });
