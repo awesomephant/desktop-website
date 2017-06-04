@@ -44,7 +44,6 @@ var handleDrag = function (e) {
 	if (e.srcElement.id === 'resize-right') {
 		document.addEventListener("mousemove", handleMouseX, false);
 	} else if (e.srcElement.id === 'resize-left') {
-		console.log('yp')
 		document.addEventListener("mousemove", handleMouseXLeft, false);
 	} else {
 		document.addEventListener("mousemove", handleMouseY, false);
@@ -52,7 +51,6 @@ var handleDrag = function (e) {
 };
 
 document.addEventListener("mouseup", function (e) {
-	console.log("up");
 	document.removeEventListener("mousemove", handleMouseX, false);
 	document.removeEventListener("mousemove", handleMouseY, false);
 	document.removeEventListener("mousemove", handleMouseXLeft, false);
