@@ -11,7 +11,7 @@ var TEST = {
 
 var spawnButton = document.getElementById('spawn-button')
 var spawnWindow = function(data){
-    var html = windowTemplate(TEST);
+    var html = windowTemplate(data);
     console.log(html)
     var el = document.createElement('div');
     el.innerHTML =  html;

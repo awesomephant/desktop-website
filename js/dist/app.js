@@ -104,7 +104,7 @@ var TEST = {
 
 var spawnButton = document.getElementById('spawn-button')
 var spawnWindow = function(data){
-    var html = windowTemplate(TEST);
+    var html = windowTemplate(data);
     console.log(html)
     var el = document.createElement('div');
     el.innerHTML =  html;
@@ -141,4 +141,22 @@ var setClock = function(){
 	clockEl.innerHTML = h + ':' + m;
 }
 setClock();
-window.setInterval(setClock, 60000)
+window.setInterval(setClock, 60000);var listTemplate = Handlebars.compile('<ul class="people-list">{{#each people}}<li>{{this.Name}}</li>{{/each}}</ul>')
+
+
+fetch('../data/people.json').then(function(response) {
+  return response.json();
+}).then(function(data) {
+    console.log(data)
+    var html = listTemplate(data);
+    console.log(html);
+    spawnWindow({
+        title: 'People',
+        content: html,
+        x: 100,
+        y: 100,
+        width: 350,
+        height: 500
+    })
+
+});
