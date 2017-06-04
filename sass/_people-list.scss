@@ -1,0 +1,23 @@
+.people-list {
+    margin-bottom: 1rem;
+}
+
+.people-list--item{
+    margin-bottom: .3rem;
+    display: flex;
+}
+
+.people-list--person {
+    cursor: pointer;
+    &:hover, &:focus {
+        color: lighten($black, 20);
+    }
+}
+
+.people-list--header {
+    font-weight: bold;
+}
+
+.people-list--name {
+    flex-basis: 70%;
+}
