@@ -56,17 +56,14 @@
 
 .window-header {
 	background: white;
-	min-height: 20px;
+	height: 25px;
 	padding: 5px 10px;
-	display: flex;
-	justify-content: space-between;
+	position: relative;
 	border-bottom: $dragbar-width solid $black;
 	width: 100%;
 	cursor: grab;
 	.is-pointer-down & {
 		cursor: grabbing;
-	}
-	&:hover, &:focus {
 		background: darken(white, 10)
 	}
 }
@@ -74,7 +71,15 @@
 .window-title {
 	font-size: .9rem;
 	font-weight: 600;
-	line-height: 1.2;
+	line-height: .75;
+	text-align: center;
+	flex-grow: 1;
+}
+
+.window-controls {
+	position: absolute;
+	top: 1px;
+	right: 10px;
 }
 
 [class*=window-control]{
