@@ -96,3 +96,11 @@
 	text-align: center;
 	font-weight: bold;
 }
+
+
+::selection {
+  color: $blue;
+}
+::-moz-selection {
+  color: $blue;
+}
