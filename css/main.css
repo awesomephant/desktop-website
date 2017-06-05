@@ -574,9 +574,14 @@ html {
   cursor: pointer;
   padding: .5rem;
   line-height: 1.2; }
+  .desktop-nav-item ellipse, .desktop-nav-item circle {
+    stroke: #141414; }
   .desktop-nav-item:hover, .desktop-nav-item:focus {
     color: #fff;
     background-color: #000; }
+    .desktop-nav-item:hover ellipse, .desktop-nav-item:hover circle, .desktop-nav-item:focus ellipse, .desktop-nav-item:focus circle {
+      fill: white;
+      stroke: white; }
   .desktop-nav-item.menu-isOpen {
     background: #141414;
     color: white; }

@@ -21,10 +21,14 @@
 <body>
     <header class="desktop-header">
         <div class="desktop-menu">
-        <h1 class="desktop-title">ANP</h1>
         <ul class="desktop-nav">
-            <li class='desktop-nav-item' id="spawn-button">About</li>
-            <li class='desktop-nav-item'>Options
+            <li class='desktop-nav-item'>
+            <svg style='width: 28px; height: 28px' viewBox="0 0 90 90"><ellipse cx="21.51" cy="44.77" rx="15.9" ry="25.99" style="fill:none;stroke-miterlimit:10;stroke-width:7px"/><ellipse cx="63.53" cy="44.77" rx="15.9" ry="25.99" style="fill:none;stroke-miterlimit:10;stroke-width:7px"/><circle cx="27.71" cy="47.79" r="10.63"/><circle cx="67.98" cy="47.79" r="10.63"/></svg>
+                            <ul class='desktop-subnav'>
+                    <li id="spawn-button" class='desktop-subnav-item'>About</li>
+                </ul>
+            </li>
+            <li class='desktop-nav-item'>View
                 <ul class='desktop-subnav'>
                     <li id='enterFullscreen' class='desktop-subnav-item'>Fullscreen</li>
                     <li onclick='window.location.reload(false);' class='desktop-subnav-item'>Reload</li>
