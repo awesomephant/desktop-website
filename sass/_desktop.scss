@@ -67,16 +67,26 @@
 
 .desktop-social {
 	display: flex;
-	padding: .5rem;
 	align-items: top;
 	a {
-		margin-right: .3rem;
+		path {
+			fill: $black;
+		}
+		padding: .5rem;
+		&:hover, &:focus {
+			background: $black;
+			path {
+				fill: white;
+			}
+		}
 	}
 
 }
 
 .desktop-clock {
+	padding-top: .6rem;
 	margin-left: .3rem;
+	padding-right: .5rem;
 }
 
 .desktop-icons {
