@@ -221,4 +221,14 @@ for (var i = 0; i < tabs.length; i++) {
         tabs[i].addEventListener('click', toggleMenu)
     }
 }
-document.addEventListener('click', closeMenus)
+document.addEventListener('click', closeMenus);var enterFullscreenButton = document.getElementById('enterFullscreen')
+
+enterFullscreenButton.addEventListener("click", function() {
+    var el = document.documentElement,
+      rfs = el.requestFullscreen
+        || el.webkitRequestFullScreen
+        || el.mozRequestFullScreen
+        || el.msRequestFullscreen 
+    ;
+    rfs.call(el);
+});
