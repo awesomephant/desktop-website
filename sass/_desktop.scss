@@ -31,30 +31,36 @@
     cursor: pointer;
 	padding: .5rem;
 	line-height: 1.2;
-	&.active {
+	    & .menu-isOpen {
 		background: $black;
 		color: white;
 	}
 }
 
 .desktop-subnav {
-    position: absolute;
-    background: #fff;
-	color: $black;
-	border: 1px solid $black;
-	top: 2.25rem;
-	left: 0;
+ display: none;
+ position: absolute;
+ background: #fff;
+ color: $black;
+ border: 1px solid $black;
+ top: 2.25rem;
+ left: 0;
+	.menu-isOpen & {
+		display: block;
+	}
 }
 
 .desktop-subnav-item {
-	display: block;
-	padding: .3rem .5rem;
-	min-width: 10rem;
-	&:hover, &:focus {
-	    color: #fff;
-	    background-color: #000;
-	}
+ display: block;
+ padding: .3rem .5rem;
+ min-width: 10rem;
+ &:hover,
+ &:focus {
+  color: #fff;
+  background-color: #000;
+ }
 }
+
 .desktop-social {
 	display: flex;
 	padding: .5rem;
