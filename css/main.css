@@ -638,13 +638,13 @@ html {
   font-weight: bold; }
 
 ::-moz-selection {
-  color: #268Aff; }
+  color: #FFC7C4; }
 
 ::selection {
-  color: #268Aff; }
+  color: #FFC7C4; }
 
 ::-moz-selection {
-  color: #268Aff; }
+  color: #FFC7C4; }
 
 .window {
   position: absolute;
