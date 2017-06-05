@@ -163,7 +163,6 @@ var setClock = function(){
 }
 setClock();
 window.setInterval(setClock, 60000);var peopleData;
-var listTemplate = Handlebars.compile('<ul class="people-list"><li class="people-list--item people-list--header"><span class="people-list--index">#</span><span class="people-list--name">Name</span><span class="people-list--course">Course</span></li>{{#each people}}<li class="people-list--item people-list--person" data-index="{{@index}}"><span class="people-list--index">{{@index}}</span><span class="people-list--name">{{this.Name}}</span><span class="people-list--course">{{this.Course}}</span></a></li>{{/each}}</ul>')
 
 var initPeopleList = function (el) {
     var people = el.querySelectorAll('.people-list--person')
@@ -172,18 +171,21 @@ var initPeopleList = function (el) {
         link.addEventListener('click', function () {
             var index = this.getAttribute('data-index');
             var person = peopleData.people[index];
+            var personTemplate = Handlebars.compile('{{#if Website}}<a class="window-button" href="{{Website}}">Website</a>{{/if}}{{#if Instagram}}<a class="window-button" href="http://www.instagram.com/{{Instagram}}">Instagram</a>{{/if}}{{#if Twitter}}<a class="window-button" href="http://www.twitter.com/{{Twitter}}">Twitter</a>{{/if}}')
+            var html = personTemplate(person);
             spawnWindow({
                 title: person.Name,
-                content: 'This is a person',
+                content: html,
                 x: 500,
                 y: 300,
-                width: 150,
-                height: 200
+                width: 350,
+                height: 300
             })
         })
     }
 }
 var spawnPeopleWindow = function () {
+    var listTemplate = Handlebars.compile('<ul class="people-list"><li class="people-list--item people-list--header"><span class="people-list--index">#</span><span class="people-list--name">Name</span><span class="people-list--course">Course</span></li>{{#each people}}<li class="people-list--item people-list--person" data-index="{{@index}}"><span class="people-list--index">{{@index}}</span><span class="people-list--name">{{this.Name}}</span><span class="people-list--course">{{this.Course}}</span></a></li>{{/each}}</ul>')
     var html = listTemplate(peopleData);
     spawnWindow({
         title: 'People',
@@ -201,4 +203,11 @@ fetch('../data/people.json').then(function (response) {
 }).then(function (data) {
     peopleData = data;
     spawnPeopleWindow();
-});
+});;var toggleMenu = function(){
+	this.classList.toggle('menu-isOpen')
+}
+
+var tabs = document.querySelectorAll('.desktop-nav-item');
+for (var i = 0; i < tabs.length; i++){
+    tabs[i].addEventListener('click', toggleMenu)
+}
