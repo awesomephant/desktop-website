@@ -538,6 +538,18 @@ body {
 html {
   background: #FFC7C4; }
 
+::-moz-selection {
+  color: white;
+  background: #141414; }
+
+::selection {
+  color: white;
+  background: #141414; }
+
+::-moz-selection {
+  color: white;
+  background: #141414; }
+
 .desktop-header {
   background: #fff;
   border-bottom: 1px solid #141414;
@@ -639,15 +651,6 @@ html {
   text-align: center;
   font-weight: bold; }
 
-::-moz-selection {
-  color: #FFC7C4; }
-
-::selection {
-  color: #FFC7C4; }
-
-::-moz-selection {
-  color: #FFC7C4; }
-
 .window {
   position: absolute;
   border-radius: 5px;
@@ -718,12 +721,14 @@ html {
   margin-bottom: 2px; }
   .window-content h1 {
     font-size: 4rem; }
+  .window-content p {
+    line-height: 1.4; }
 
 .window-header {
   background: white;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#141414), color-stop(15%, #141414), color-stop(15%, transparent), color-stop(30%, transparent), color-stop(30%, #141414), color-stop(45%, #141414), color-stop(45%, transparent), color-stop(60%, transparent), color-stop(60%, #141414), color-stop(74%, #141414), color-stop(74%, transparent), to(transparent));
   background-image: linear-gradient(top, #141414 0%, #141414 15%, transparent 15%, transparent 30%, #141414 30%, #141414 45%, transparent 45%, transparent 60%, #141414 60%, #141414 74%, transparent 74%, transparent 100%);
-  background-size: 96% 18px;
+  background-size: calc(100% - 10px) 18px;
   background-position: center 5px;
   background-repeat: no-repeat;
   height: 25px;
@@ -750,12 +755,13 @@ html {
   position: absolute;
   top: 1px;
   height: 22px;
-  right: 9px;
+  right: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background: white;
-  border-left: 4px solid white; }
+  border-left: 4px solid white;
+  border-right: 4px solid white; }
 
 a[class*=window-control] {
   display: inline-block;
