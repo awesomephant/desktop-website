@@ -2,7 +2,7 @@ var windowTemplate = Handlebars.compile('<header class="window-header"><h2 class
 
 var TEST = {
     title: 'About',
-    content: '<p>Camberwell College of Arts<br />FdA Graphic Design & Illustration Degree Show 2017<br /><br />June 19 — 23, 2017<br />1 Wilson Road<br />London<br />SE5 8LU</p>',
+    content: '<p>Camberwell College of Arts<br />FdA Graphic Design & Illustration Degree Show 2017<br /><br />June 19 — 23, 2017<br/>1 Wilson Road<br/>London<br/>SE5 8LU</p>',
     x: 130,
     y: 150,
     width: 450,
@@ -27,5 +27,5 @@ var spawnWindow = function(data){
     }
     document.body.appendChild(el);
 }
-
+spawnWindow(TEST)
 spawnButton.addEventListener('click', function(){spawnWindow(TEST)});
