@@ -100,11 +100,11 @@ initWindows();
 
 var TEST = {
     title: 'About',
-    content: '<p>Camberwell College of Arts FdA Graphic Design & Illustration Degree Show 2017</p>',
+    content: '<p>Camberwell College of Arts<br />FdA Graphic Design & Illustration Degree Show 2017<br /><br />June 19 — 23, 2017<br />1 Wilson Road<br />London<br />SE5 8LU</p>',
     x: 130,
     y: 150,
-    width: 400,
-    height: 100
+    width: 450,
+    height: 200
 }
 
 var spawnButton = document.getElementById('spawn-button')
