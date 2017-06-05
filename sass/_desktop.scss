@@ -34,17 +34,13 @@
 	ellipse, circle {
 		stroke: $black;
 	}
-	&:hover, &:focus {
+	&:hover, &:focus, &.menu-isOpen {
 		color: #fff;
 	    background-color: #000;
 		ellipse, circle {
 			fill: white;
 			stroke: white;
 		}
-	}
-	&.menu-isOpen {
-		background: $black;
-		color: white;
 	}
 }
 
