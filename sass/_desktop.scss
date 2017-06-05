@@ -26,16 +26,15 @@
 	display: flex;
 }
 
-.desktop-nav-item:hover {
-    color: #fff;
-    background-color: #000;
-}
-
 .desktop-nav-item {
     position: relative;
     cursor: pointer;
 	padding: .5rem;
 	line-height: 1.2;
+	&:hover, &:focus {
+		color: #fff;
+	    background-color: #000;
+	}
 	&.menu-isOpen {
 		background: $black;
 		color: white;
