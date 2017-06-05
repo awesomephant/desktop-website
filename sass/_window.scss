@@ -146,3 +146,14 @@ a[class*=window-control]{
 	height: 100%;
 	cursor: ew-resize;
 }
+
+p[contenteditable]{
+	line-height: 1.4;
+	div {
+		margin-top: .5rem;
+	}
+	&:focus {
+		outline: none;
+		appearance: none;
+	}
+}
