@@ -721,34 +721,41 @@ html {
 
 .window-header {
   background: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#141414), color-stop(15%, #141414), color-stop(15%, transparent), color-stop(30%, transparent), color-stop(30%, #141414), color-stop(45%, #141414), color-stop(45%, transparent), color-stop(60%, transparent), color-stop(60%, #141414), color-stop(74%, #141414), color-stop(74%, transparent), to(transparent));
+  background-image: linear-gradient(top, #141414 0%, #141414 15%, transparent 15%, transparent 30%, #141414 30%, #141414 45%, transparent 45%, transparent 60%, #141414 60%, #141414 74%, transparent 74%, transparent 100%);
+  background-size: 96% 18px;
+  background-position: center 5px;
+  background-repeat: no-repeat;
   height: 25px;
-  padding: 5px 10px;
   position: relative;
   border-bottom: 2px solid #141414;
   width: 100%;
   cursor: -webkit-grab;
-  cursor: grab; }
+  cursor: grab;
+  text-align: center; }
   .is-pointer-down .window-header {
     cursor: -webkit-grabbing;
-    cursor: grabbing;
-    background: #e6e5e5; }
+    cursor: grabbing; }
 
 .window-title {
   font-size: .9rem;
   font-weight: 600;
-  line-height: .75;
+  line-height: 1;
   text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1; }
+  padding: 4px 10px;
+  display: inline-block;
+  background: white; }
 
 .window-controls {
   position: absolute;
   top: 1px;
-  right: 10px;
+  height: 22px;
+  right: 9px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  background: white;
+  border-left: 4px solid white; }
 
 a[class*=window-control] {
   display: inline-block;
