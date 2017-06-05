@@ -3,6 +3,13 @@ body {
     overflow: hidden;
 }
 html {
-		background: #FFC7C4;
-
+	background: #FFC7C4;
+}
+::selection {
+   color: white;
+   background: $black;
+}
+::-moz-selection {
+   color: white;
+   background: $black;
 }
