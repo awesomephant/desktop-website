@@ -26,6 +26,11 @@
 	display: flex;
 }
 
+.desktop-nav-item:hover {
+    color: #fff;
+    background-color: #000;
+}
+
 .desktop-nav-item {
     position: relative;
     cursor: pointer;
