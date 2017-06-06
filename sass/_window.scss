@@ -58,6 +58,13 @@
 //	animation: waveBackground 60s linear infinite;
 }
 
+.window-rsvp {
+	left: 400px;
+	top: 258px;
+	height: 100px;
+	z-index: 100;
+}
+
 .window-countdown {
 	left: 600px;
 	top: 400px;
@@ -179,8 +186,15 @@ p[contenteditable]{
 	line-height: 1.4;
 	margin-right: 1rem;
 	box-shadow: 2px 2px 0 0 $black;
+	text-align: center;
 	&:active {
 		box-shadow: none;
 		transform: translate(2px,2px);
 	}
+}
+
+.window-button-big {
+	@extend .window-button;
+	display: block;
+	width: 100%;
 }
