@@ -55,5 +55,5 @@ document.addEventListener("mousemove", function (e) {
     }
 });
 
-spawnEyeWindow();
+// spawnEyeWindow();
 
