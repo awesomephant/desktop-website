@@ -7,6 +7,10 @@
 	overflow: hidden;
 	animation: windowIn 500ms ease;
 	box-shadow: -10px 10px 0 0 rgba(black, .2);
+	.monochrome & {
+		box-shadow: 2px 2px 0 0 rgba(black, 1);
+		border-radius: 2px;
+	}
 	&.closed {
 		opacity: .7;
 		transition: 300ms;
@@ -38,6 +42,10 @@
 	background: $blue;
 	width: 440px;
 	height: 300px;
+	.monochrome & {
+		background-color: white;
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAP0lEQVQoU42Q0QoAIAgDz///aMPAKKeQb26HTg0tB6zKVUhI4Bus5tMn2K4Djh7gBGXM7Uvo5riQ/BfUNwwTWfn+Cgg4zkoRAAAAAElFTkSuQmCC);
+	}
 }
 
 .window-logo {
@@ -55,7 +63,10 @@
 	width: 540px;
 	height:350px;
 	background-color: $green;
-//	animation: waveBackground 60s linear infinite;
+	.monochrome & {
+		background-color: white;
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==);
+	}
 }
 
 .window-rsvp {
@@ -89,7 +100,7 @@
 
 .window-header {
 	background: white;
-	background-image: linear-gradient(top,$black 0%, $black 15%, transparent 15%, transparent 30%, $black 30%, $black 45%,transparent 45%, transparent 60%, $black 60%, $black 74%, transparent 74%, transparent 100%);
+	background-image: linear-gradient(to bottom,$black 0%, $black 15%, transparent 15%, transparent 30%, $black 30%, $black 45%,transparent 45%, transparent 60%, $black 60%, $black 74%, transparent 74%, transparent 100%);
 	background-size: calc(100% - 10px) 18px;
 	background-position: center 5px;
 	background-repeat: no-repeat;

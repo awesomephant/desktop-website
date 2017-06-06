@@ -5,6 +5,9 @@
 	font-size: 1.1rem;
 	justify-content: space-between;
 	padding: 0 .5rem;
+	.monochrome & {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQYV2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXQdISfAAAAAElFTkSuQmCC);
+	}
 	a {
 		color: $black;
 		text-decoration: none;

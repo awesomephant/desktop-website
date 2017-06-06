@@ -537,6 +537,9 @@ body {
 
 html {
   background: #FFC7C4; }
+  html.monochrome {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFUlEQVQYV2NkYGD4z8DAwMjIAAH/AQ8oAgJbL/zzAAAAAElFTkSuQmCC);
+    background-size: 3px; }
 
 ::-moz-selection {
   color: white;
@@ -550,6 +553,38 @@ html {
   color: white;
   background: #141414; }
 
+.monochrome {
+  /* Turn off the down area up on top, and up area on bottom */
+  /* Place The scroll down button at the bottom */
+  /* Place The scroll up button at the up */
+  /* Top area above thumb and below up button */
+  /* Bottom area below thumb and down button */
+  /* Track below and above */
+  /* The thumb itself */ }
+  .monochrome ::-webkit-scrollbar {
+    width: 15px;
+    height: 13px; }
+  .monochrome ::-webkit-scrollbar-button:vertical:start:increment,
+  .monochrome ::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none; }
+  .monochrome ::-webkit-scrollbar-button:vertical:increment {
+    display: none; }
+  .monochrome ::-webkit-scrollbar-button:vertical:decrement {
+    display: none; }
+  .monochrome ::-webkit-scrollbar-track:vertical {
+    display: none; }
+  .monochrome ::-webkit-scrollbar-track-piece:vertical:start {
+    border: 0; }
+  .monochrome ::-webkit-scrollbar-track-piece {
+    background-color: white;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQYV2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXQdISfAAAAAElFTkSuQmCC); }
+  .monochrome ::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: white;
+    border-top: 1px solid #141414;
+    border-left: 1px solid #141414;
+    border-bottom: 1px solid #141414; }
+
 .desktop-header {
   background: #fff;
   border-bottom: 1px solid #141414;
@@ -561,6 +596,8 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 .5rem; }
+  .monochrome .desktop-header {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQYV2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXQdISfAAAAAElFTkSuQmCC); }
   .desktop-header a {
     color: #141414;
     text-decoration: none; }
@@ -662,6 +699,10 @@ html {
           animation: windowIn 500ms ease;
   -webkit-box-shadow: -10px 10px 0 0 rgba(0, 0, 0, 0.2);
           box-shadow: -10px 10px 0 0 rgba(0, 0, 0, 0.2); }
+  .monochrome .window {
+    -webkit-box-shadow: 2px 2px 0 0 black;
+            box-shadow: 2px 2px 0 0 black;
+    border-radius: 2px; }
   .window.closed {
     opacity: .7;
     -webkit-transition: 300ms;
@@ -690,6 +731,9 @@ html {
   background: #268Aff;
   width: 440px;
   height: 300px; }
+  .monochrome .window-1 {
+    background-color: white;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAP0lEQVQoU42Q0QoAIAgDz///aMPAKKeQb26HTg0tB6zKVUhI4Bus5tMn2K4Djh7gBGXM7Uvo5riQ/BfUNwwTWfn+Cgg4zkoRAAAAAElFTkSuQmCC); }
 
 .window-logo {
   left: 2rem;
@@ -705,6 +749,9 @@ html {
   width: 540px;
   height: 350px;
   background-color: #12ff6a; }
+  .monochrome .window-2 {
+    background-color: white;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==); }
 
 .window-rsvp {
   left: 400px;
@@ -733,7 +780,7 @@ html {
 .window-header {
   background: white;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#141414), color-stop(15%, #141414), color-stop(15%, transparent), color-stop(30%, transparent), color-stop(30%, #141414), color-stop(45%, #141414), color-stop(45%, transparent), color-stop(60%, transparent), color-stop(60%, #141414), color-stop(74%, #141414), color-stop(74%, transparent), to(transparent));
-  background-image: linear-gradient(top, #141414 0%, #141414 15%, transparent 15%, transparent 30%, #141414 30%, #141414 45%, transparent 45%, transparent 60%, #141414 60%, #141414 74%, transparent 74%, transparent 100%);
+  background-image: linear-gradient(to bottom, #141414 0%, #141414 15%, transparent 15%, transparent 30%, #141414 30%, #141414 45%, transparent 45%, transparent 60%, #141414 60%, #141414 74%, transparent 74%, transparent 100%);
   background-size: calc(100% - 10px) 18px;
   background-position: center 5px;
   background-repeat: no-repeat;
