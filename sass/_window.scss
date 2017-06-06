@@ -89,7 +89,7 @@
 
 .window-header {
 	background: white;
-	background-image: linear-gradient(top,$black 0%, $black 15%, transparent 15%, transparent 30%, $black 30%, $black 45%,transparent 45%, transparent 60%, $black 60%, $black 74%, transparent 74%, transparent 100%);
+	background-image: linear-gradient(to bottom,$black 0%, $black 15%, transparent 15%, transparent 30%, $black 30%, $black 45%,transparent 45%, transparent 60%, $black 60%, $black 74%, transparent 74%, transparent 100%);
 	background-size: calc(100% - 10px) 18px;
 	background-position: center 5px;
 	background-repeat: no-repeat;

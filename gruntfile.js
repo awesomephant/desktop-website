@@ -33,7 +33,7 @@ module.exports = function (grunt) {
                 separator: ';',
             },
             dist: {
-                src: ['./js/src/window.js', './js/src/spawnWindow.js', './js/src/spawnNotepadWindow.js', './js/src/timer.js', './js/src/clock.js', './js/src/listPeople.js', './js/src/toggleMenu.js', './js/src/requestFullscreen.js'],
+                src: ['./js/src/window.js', './js/src/spawnWindow.js', './js/src/spawnNotepadWindow.js', './js/src/timer.js', './js/src/clock.js', './js/src/listPeople.js', './js/src/toggleMenu.js', './js/src/requestFullscreen.js', './js/src/eye.js'],
                 dest: './js/dist/app.js',
             },
         },
