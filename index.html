@@ -21,22 +21,29 @@
 <body>
     <header class="desktop-header">
         <div class="desktop-menu">
-        <ul class="desktop-nav">
-            <li class='desktop-nav-item'>
-            <svg style='width: 28px; height: 28px' viewBox="0 0 90 90"><ellipse cx="21.51" cy="44.77" rx="15.9" ry="25.99" style="fill:none;stroke-miterlimit:10;stroke-width:7px"/><ellipse cx="63.53" cy="44.77" rx="15.9" ry="25.99" style="fill:none;stroke-miterlimit:10;stroke-width:7px"/><circle cx="27.71" cy="47.79" r="10.63"/><circle cx="67.98" cy="47.79" r="10.63"/></svg>
-                            <ul class='desktop-subnav'>
-                    <li id="spawn-button" class='desktop-subnav-item'>About</li>
-                </ul>
-            </li>
-            <li class='desktop-nav-item'>View
-                <ul class='desktop-subnav'>
-                    <li id='enterFullscreen' class='desktop-subnav-item'>Fullscreen</li>
-                    <li onclick='window.location.reload(false);' class='desktop-subnav-item'>Reload</li>
-                    <li onclick='toggleMonochromeMode()' class='desktop-subnav-item'>Monochrome Mode</li>
-                </ul>
-            </li>
-        </ul>
-        </nav>
+            <ul class="desktop-nav">
+                <li class='desktop-nav-item'>
+                    <svg style='width: 28px; height: 28px' viewBox="0 0 90 90">
+                        <ellipse cx="21.51" cy="44.77" rx="15.9" ry="25.99" style="fill:none;stroke-miterlimit:10;stroke-width:7px"
+                        />
+                        <ellipse cx="63.53" cy="44.77" rx="15.9" ry="25.99" style="fill:none;stroke-miterlimit:10;stroke-width:7px"
+                        />
+                        <circle cx="27.71" cy="47.79" r="10.63" />
+                        <circle cx="67.98" cy="47.79" r="10.63" />
+                    </svg>
+                    <ul class='desktop-subnav'>
+                        <li id="spawn-button" class='desktop-subnav-item'>About</li>
+                    </ul>
+                </li>
+                <li class='desktop-nav-item'>View
+                    <ul class='desktop-subnav'>
+                        <li id='enterFullscreen' class='desktop-subnav-item'>Fullscreen</li>
+                        <li onclick='window.location.reload(false);' class='desktop-subnav-item'>Reload</li>
+                        <li onclick='toggleMonochromeMode()' class='desktop-subnav-item'>Monochrome Mode</li>
+                    </ul>
+                </li>
+            </ul>
+            </nav>
         </div>
         <nav class="desktop-social">
             <a href="https://www.instagram.com/anicepair/" target="_blank">
@@ -63,17 +70,41 @@
             </svg>
             <h2 class='desktop-icon-title'>People.XLS</h2>
         </li>
-        <li onclick="spawnNotepadWindow()" class="desktop-icon">
+        <li onclick="spawnEyeWindow()" class="desktop-icon">
             <svg class='desktop-icon-image' style="width:80px;height:80px" viewBox="0 0 24 24">
                 <path fill="#757575" d="M13,9H18.5L13,3.5V9M6,2H14L20,8V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V4C4,2.89 4.89,2 6,2M15,18V16H6V18H15M18,14V12H6V14H18Z"
                 />
             </svg>
-            <h2 class='desktop-icon-title'>Angela's Letter.TXT</h2>
+            <h2 class='desktop-icon-title'>Spawn Eye</h2>
+        </li>
+        <li onclick="spawnPeopleWindow()" class="desktop-icon">
+            <svg class='desktop-icon-image' style="width:80px;height:80px" viewBox="0 0 24 24">
+                <path fill="#757575" d="M13,9H18.5L13,3.5V9M6,2H14L20,8V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V4C4,2.89 4.89,2 6,2M15,18V16H6V18H15M18,14V12H6V14H18Z"
+                />
+            </svg>
+            <h2 class='desktop-icon-title'>People.XLS</h2>
         </li>
     </ul>
     <div class="window window-1 draggable">
         <header class="window-header">
-            <nav class="window-controls"><a href="#1" id="fullscreen-button" class="window-control-fullscreen"><svg class="icon-enter-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#000000" d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z"/></svg><svg class="icon-exit-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#000000" d="M14,14H19V16H16V19H14V14M5,14H10V19H8V16H5V14M8,5H10V10H5V8H8V5M19,8V10H14V5H16V8H19Z" /></svg></a><a href="#1" id="close-button" class="window-control-close"><svg><path fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/></svg></a></nav>
+            <nav class="window-controls">
+                <a href="#1" id="fullscreen-button" class="window-control-fullscreen">
+                    <svg class="icon-enter-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#000000" d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z"
+                        />
+                    </svg>
+                    <svg class="icon-exit-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#000000" d="M14,14H19V16H16V19H14V14M5,14H10V19H8V16H5V14M8,5H10V10H5V8H8V5M19,8V10H14V5H16V8H19Z"
+                        />
+                    </svg>
+                </a>
+                <a href="#1" id="close-button" class="window-control-close">
+                    <svg>
+                        <path fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                        />
+                    </svg>
+                </a>
+            </nav>
         </header>
         <div class='dragbar-right' id="resize-right"></div>
         <div class='dragbar-left' id="resize-left"></div>
@@ -85,7 +116,24 @@
     <div class="window window-logo draggable">
         <header class="window-header">
             <h2 class="window-title">logo.BMP</h2>
-            <nav class="window-controls"><a href="#1" id="fullscreen-button" class="window-control-fullscreen"><svg class="icon-enter-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#000000" d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z"/></svg><svg class="icon-exit-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#000000" d="M14,14H19V16H16V19H14V14M5,14H10V19H8V16H5V14M8,5H10V10H5V8H8V5M19,8V10H14V5H16V8H19Z" /></svg></a><a href="#1" id="close-button" class="window-control-close"><svg><path fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/></svg></a></nav>
+            <nav class="window-controls">
+                <a href="#1" id="fullscreen-button" class="window-control-fullscreen">
+                    <svg class="icon-enter-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#000000" d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z"
+                        />
+                    </svg>
+                    <svg class="icon-exit-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#000000" d="M14,14H19V16H16V19H14V14M5,14H10V19H8V16H5V14M8,5H10V10H5V8H8V5M19,8V10H14V5H16V8H19Z"
+                        />
+                    </svg>
+                </a>
+                <a href="#1" id="close-button" class="window-control-close">
+                    <svg>
+                        <path fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                        />
+                    </svg>
+                </a>
+            </nav>
         </header>
         <div class='dragbar-right' id="resize-right"></div>
         <div class='dragbar-left' id="resize-left"></div>
@@ -97,7 +145,24 @@
 
     <div class="window draggable window-2">
         <header class="window-header">
-            <nav class="window-controls"><a href="#1" id="fullscreen-button" class="window-control-fullscreen"><svg class="icon-enter-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#000000" d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z"/></svg><svg class="icon-exit-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#000000" d="M14,14H19V16H16V19H14V14M5,14H10V19H8V16H5V14M8,5H10V10H5V8H8V5M19,8V10H14V5H16V8H19Z" /></svg></a><a href="#1" id="close-button" class="window-control-close"><svg><path fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/></svg></a></nav>
+            <nav class="window-controls">
+                <a href="#1" id="fullscreen-button" class="window-control-fullscreen">
+                    <svg class="icon-enter-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#000000" d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z"
+                        />
+                    </svg>
+                    <svg class="icon-exit-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#000000" d="M14,14H19V16H16V19H14V14M5,14H10V19H8V16H5V14M8,5H10V10H5V8H8V5M19,8V10H14V5H16V8H19Z"
+                        />
+                    </svg>
+                </a>
+                <a href="#1" id="close-button" class="window-control-close">
+                    <svg>
+                        <path fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                        />
+                    </svg>
+                </a>
+            </nav>
         </header>
         <div class='dragbar-right' id="resize-right"></div>
         <div class='dragbar-left' id="resize-left"></div>
@@ -110,7 +175,24 @@
     <div class="window window-countdown draggable">
         <header class="window-header">
             <h2 class="window-title">Time to Opening</h2>
-            <nav class="window-controls"><a href="#1" id="fullscreen-button" class="window-control-fullscreen"><svg class="icon-enter-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#000000" d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z"/></svg><svg class="icon-exit-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#000000" d="M14,14H19V16H16V19H14V14M5,14H10V19H8V16H5V14M8,5H10V10H5V8H8V5M19,8V10H14V5H16V8H19Z" /></svg></a><a href="#1" id="close-button" class="window-control-close"><svg><path fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/></svg></a></nav>
+            <nav class="window-controls">
+                <a href="#1" id="fullscreen-button" class="window-control-fullscreen">
+                    <svg class="icon-enter-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#000000" d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z"
+                        />
+                    </svg>
+                    <svg class="icon-exit-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#000000" d="M14,14H19V16H16V19H14V14M5,14H10V19H8V16H5V14M8,5H10V10H5V8H8V5M19,8V10H14V5H16V8H19Z"
+                        />
+                    </svg>
+                </a>
+                <a href="#1" id="close-button" class="window-control-close">
+                    <svg>
+                        <path fill="#000000" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                        />
+                    </svg>
+                </a>
+            </nav>
         </header>
         <div class='dragbar-right' id="resize-right"></div>
         <div class='dragbar-left' id="resize-left"></div>
@@ -119,15 +201,27 @@
             <h1 id='time-string'>1d 2h 4m</h1>
         </div>
     </div>
-     <div class="window window-rsvp draggable">
+    <div class="window window-rsvp draggable">
         <header class="window-header">
-            <nav class="window-controls"><a href="#1" id="fullscreen-button" class="window-control-fullscreen"><svg class="icon-enter-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#000000" d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z"/></svg><svg class="icon-exit-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#000000" d="M14,14H19V16H16V19H14V14M5,14H10V19H8V16H5V14M8,5H10V10H5V8H8V5M19,8V10H14V5H16V8H19Z" /></svg></a></nav>
+            <nav class="window-controls">
+                <a href="#1" id="fullscreen-button" class="window-control-fullscreen">
+                    <svg class="icon-enter-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#000000" d="M5,5H10V7H7V10H5V5M14,5H19V10H17V7H14V5M17,14H19V19H14V17H17V14M10,17V19H5V14H7V17H10Z"
+                        />
+                    </svg>
+                    <svg class="icon-exit-fullscreen" style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#000000" d="M14,14H19V16H16V19H14V14M5,14H10V19H8V16H5V14M8,5H10V10H5V8H8V5M19,8V10H14V5H16V8H19Z"
+                        />
+                    </svg>
+                </a>
+            </nav>
         </header>
         <div class='dragbar-right' id="resize-right"></div>
         <div class='dragbar-left' id="resize-left"></div>
         <div class='dragbar-bottom' id="resize-bottom"></div>
         <div class="window-content">
-            <a href="https://www.eventbrite.co.uk/e/private-view-undergraduate-ma-conservation-summer-show-2017-tickets-33014442085" class="window-button-big">RSVP</a>
+            <a href="https://www.eventbrite.co.uk/e/private-view-undergraduate-ma-conservation-summer-show-2017-tickets-33014442085"
+                class="window-button-big">RSVP</a>
         </div>
     </div>
 

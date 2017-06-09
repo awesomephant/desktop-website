@@ -675,8 +675,7 @@ html {
 .desktop-icons {
   position: absolute;
   right: 2rem;
-  top: 5rem;
-  display: none; }
+  top: 5rem; }
 
 .desktop-icon {
   cursor: pointer;
