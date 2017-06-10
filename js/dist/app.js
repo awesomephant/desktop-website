@@ -104,7 +104,7 @@ var TEST = {
     x: 130,
     y: 150,
     width: 450,
-    height: 200
+    height: 220
 }
 
 var spawnButton = document.getElementById('spawn-button')
