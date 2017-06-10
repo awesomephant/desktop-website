@@ -54,6 +54,3 @@ document.addEventListener("mousemove", function (e) {
         trackEye(e, eyes[i]);
     }
 });
-
-// spawnEyeWindow();
-

@@ -13,11 +13,13 @@ for (var i = 0, len = draggableElems.length; i < len; i++) {
 }
 
 var windows;
+var topZIndex = 10;
 var activeWindow = document.querySelector('.window');
 var handleClose = function (e) {
-	activeWindow.classList.toggle('closed')
+	let w = e.srcElement.closest('.window');
+	w.classList.toggle('closed')
 	window.setTimeout(function () {
-		activeWindow.parentNode.removeChild(activeWindow);
+		w.parentNode.removeChild(w);
 	}, 1000)
 }
 var handleFullscreen = function (e) {
@@ -75,9 +77,10 @@ var initWindow = function (w) {
 		fullscreenButton.addEventListener("click", handleFullscreen, false);
 	}
 	w.addEventListener("mousedown", function (e) {
-		activeWindow.style.zIndex = 0;
-		activeWindow = e.srcElement.closest('.window');
-		activeWindow.style.zIndex = 10;
+		let w = e.srcElement.closest('.window');
+		activeWindow = w;
+		topZIndex += 1;
+		w.style.zIndex = topZIndex;
 	})
 
 	var draggie = new Draggabilly(w, {
@@ -104,7 +107,7 @@ var TEST = {
     x: 130,
     y: 150,
     width: 450,
-    height: 200
+    height: 220
 }
 
 var spawnButton = document.getElementById('spawn-button')
@@ -286,9 +289,6 @@ document.addEventListener("mousemove", function (e) {
         trackEye(e, eyes[i]);
     }
 });
-
-// spawnEyeWindow();
-
 ;var toggleMonochromeMode = function(){
     var html = document.getElementsByTagName('html')[0]
     html.classList.toggle('monochrome')
