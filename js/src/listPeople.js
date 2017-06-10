@@ -53,10 +53,10 @@ var spawnPeopleWindow = function () {
     spawnWindow({
         title: 'People',
         content: html,
-        x: 100,
-        y: 100,
-        width: 350,
-        height: 500,
+        x: 688,
+        y: 70,
+        width: 330,
+        height: 275,
         init: initPeopleList
     })
 }
