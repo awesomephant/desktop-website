@@ -16,9 +16,10 @@ var windows;
 var topZIndex = 10;
 var activeWindow = document.querySelector('.window');
 var handleClose = function (e) {
-	activeWindow.classList.toggle('closed')
+	let w = e.srcElement.closest('.window');
+	w.classList.toggle('closed')
 	window.setTimeout(function () {
-		activeWindow.parentNode.removeChild(activeWindow);
+		w.parentNode.removeChild(w);
 	}, 1000)
 }
 var handleFullscreen = function (e) {
