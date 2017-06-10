@@ -13,6 +13,7 @@ for (var i = 0, len = draggableElems.length; i < len; i++) {
 }
 
 var windows;
+var topZIndex = 10;
 var activeWindow = document.querySelector('.window');
 var handleClose = function (e) {
 	activeWindow.classList.toggle('closed')
@@ -75,9 +76,10 @@ var initWindow = function (w) {
 		fullscreenButton.addEventListener("click", handleFullscreen, false);
 	}
 	w.addEventListener("mousedown", function (e) {
-		activeWindow.style.zIndex = 0;
-		activeWindow = e.srcElement.closest('.window');
-		activeWindow.style.zIndex = 10;
+		let w = e.srcElement.closest('.window');
+		activeWindow = w;
+		topZIndex += 1;
+		w.style.zIndex = topZIndex;
 	})
 
 	var draggie = new Draggabilly(w, {
