@@ -123,6 +123,8 @@ var spawnWindow = function(data){
     el.style.left = data.x + 'px';
     el.style.top = data.y + 'px';
     el.style.position = 'absolute';
+    topZIndex += 1;
+    el.style.zIndex = topZIndex;
     if (data.init){
     data.init(el);
     }
