@@ -31,3 +31,10 @@ grunt
 ```
 
 Make sure you have grunt-cli installed. If not, run `npm install -g grunt-cli`
+
+
+## Updating student data
+This requires nodejs to be installed.
+1. Download [this spreadsheet](https://docs.google.com/spreadsheets/d/1aGb_1RbQFDHfyNVOlDAjrLRaj03vQWU1kwn54xqRjXc/edit#gid=1867528276) as a CSV
+2. Place the CSV file in `./data` and rename it to `people.csv`
+3. Run `node parsePeople.js`
