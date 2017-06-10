@@ -97,7 +97,7 @@
 
 .desktop-icons {
 	position: absolute;
-	right: 2rem;
+	right: 3rem;
 	top: 5rem;
 }
 
@@ -105,10 +105,25 @@
 	cursor: pointer;
 	max-width: 6rem;
 	text-align: center;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
+	&:hover, &:focus {
+		.desktop-icon-title {
+			color: white;
+			background: $black;
+		}
+	}
 }
 
 .desktop-icon-title {
 	text-align: center;
-	font-weight: bold;
+	font-weight: 600;
+	color: $black;
+	background: white;
+	padding: 2px 1px;
+	border-radius: 2px;
+}
+
+.desktop-icon-image {
+	width: 3.4rem;
+	margin-bottom: .5rem;
 }

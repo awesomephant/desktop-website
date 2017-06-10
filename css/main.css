@@ -674,18 +674,29 @@ html {
 
 .desktop-icons {
   position: absolute;
-  right: 2rem;
+  right: 3rem;
   top: 5rem; }
 
 .desktop-icon {
   cursor: pointer;
   max-width: 6rem;
   text-align: center;
-  margin-bottom: 1rem; }
+  margin-bottom: 2rem; }
+  .desktop-icon:hover .desktop-icon-title, .desktop-icon:focus .desktop-icon-title {
+    color: white;
+    background: #141414; }
 
 .desktop-icon-title {
   text-align: center;
-  font-weight: bold; }
+  font-weight: 600;
+  color: #141414;
+  background: white;
+  padding: 2px 1px;
+  border-radius: 2px; }
+
+.desktop-icon-image {
+  width: 3.4rem;
+  margin-bottom: .5rem; }
 
 .window {
   position: absolute;
@@ -908,3 +919,13 @@ p[contenteditable] {
 .people-list--index {
   -ms-flex-preferred-size: 10%;
       flex-basis: 10%; }
+
+.eye-blue {
+  fill: #268Aff;
+  stroke: #141414; }
+
+.eye-black {
+  fill: #141414; }
+
+.monochrome .eye-blue {
+  fill: #7a7a7a; }

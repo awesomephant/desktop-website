@@ -1,0 +1,14 @@
+.eye-blue {
+    fill: $blue;
+    stroke: $black;
+}
+
+.eye-black {
+    fill: $black;
+}
+
+.monochrome {
+    .eye-blue {
+        fill: lighten($black, 40);
+    }
+}
