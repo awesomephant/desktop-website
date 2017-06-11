@@ -785,7 +785,8 @@ html {
   .window-content h1 {
     font-size: 4rem; }
   .window-content p {
-    line-height: 1.4; }
+    line-height: 1.4;
+    margin-bottom: .5rem; }
 
 .window-header {
   background: white;
