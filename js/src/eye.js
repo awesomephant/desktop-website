@@ -11,7 +11,7 @@ var spawnEyeWindow = function(){
         y: 60,
         width: 154,
         height: 176,
-        title: 'Oh look',
+        title: 'Eye.EXE',
         content: SVGEYE
     })
     initEyes();
