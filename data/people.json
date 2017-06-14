@@ -141,7 +141,7 @@
    "Show Piece Title": "",
    "Images Ready?": "No",
    "Spoken to": "No",
-   "Notes": "Can't find on any social media - will be sending e-mail via UAL, will likely take longer to respond"
+   "Notes": "Can't find on any social media - will be sending e-mail via UAL, will likely take longer to respond. Changed from ILL to GD"
   },
   {
    "Name": "Derrick Egblewogbe",
@@ -170,7 +170,7 @@
    "Course": "GD",
    "Instagram": "",
    "Twitter": "",
-   "Website": "https://www.behance.net/user/?username=dominicfagan",
+   "Website": "https://www.behance.net/dominicfagan",
    "Show Piece Title": "",
    "Images Ready?": "No",
    "Spoken to": "Yes",
@@ -192,7 +192,7 @@
    "Course": "GD",
    "Instagram": "",
    "Twitter": "",
-   "Website": "",
+   "Website": "https://www.behance.net/alicefone1",
    "Show Piece Title": "Angles of Balfron",
    "Images Ready?": "No",
    "Spoken to": "Yes",
@@ -296,6 +296,17 @@
    "Images Ready?": "No",
    "Spoken to": "No",
    "Notes": "Lula has him on facebook - she will get the quickest response there"
+  },
+  {
+   "Name": "Alper Öz",
+   "Course": "ILL",
+   "Instagram": "logicmyass",
+   "Twitter": "",
+   "Website": "https://www.facebook.com/alpzillustration",
+   "Show Piece Title": "Get Down",
+   "Images Ready?": "No",
+   "Spoken to": "",
+   "Notes": ""
   },
   {
    "Name": "Margot Parker",
@@ -471,17 +482,6 @@
    "Show Piece Title": "Calonarang",
    "Images Ready?": "No",
    "Spoken to": "Yes",
-   "Notes": ""
-  },
-  {
-   "Name": "Alper Öz",
-   "Course": "ILL",
-   "Instagram": "logicmyass",
-   "Twitter": "",
-   "Website": "https://www.facebook.com/alpzillustration",
-   "Show Piece Title": "Get Down",
-   "Images Ready?": "No",
-   "Spoken to": "",
    "Notes": ""
   }
  ]

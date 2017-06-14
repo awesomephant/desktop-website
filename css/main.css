@@ -787,6 +787,8 @@ html {
   .window-content p {
     line-height: 1.4;
     margin-bottom: .5rem; }
+  .window-content a {
+    color: #141414; }
 
 .window-header {
   background: white;
