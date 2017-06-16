@@ -7,7 +7,7 @@ var spawnWindow = function (data) {
     initWindow(el);
     el.classList.add('window')
     el.classList.add('draggable')
-    el.classList.add('window-' + data.title.toLowerCase().replace('.', '-'))
+    //el.classList.add('window-' + data.title.toLowerCase().replace('.', '-'))
     el.style.width = data.width + 'px';
     el.style.height = data.height + 'px';
     el.style.left = data.x + 'px';
