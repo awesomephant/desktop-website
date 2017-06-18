@@ -784,11 +784,17 @@ html {
   margin-bottom: 2px; }
   .window-content h1 {
     font-size: 4rem; }
+  .window-content h2 {
+    margin-bottom: 1rem; }
   .window-content p {
     line-height: 1.4;
     margin-bottom: .5rem; }
   .window-content a {
     color: #141414; }
+  .window-content img {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 1rem; }
 
 .window-header {
   background: white;
@@ -922,10 +928,6 @@ p[contenteditable] {
 .people-list--index {
   -ms-flex-preferred-size: 10%;
       flex-basis: 10%; }
-
-* {
-  -webkit-transition: 300ms;
-  transition: 300ms; }
 
 .eye-blue {
   fill: #268Aff;
