@@ -16,7 +16,7 @@ var windows;
 var topZIndex = 10;
 var activeWindow = document.querySelector('.window');
 var handleClose = function (e) {
-	let w = e.srcElement.closest('.window');
+	var w = e.srcElement.closest('.window');
 	w.classList.toggle('closed')
 	window.setTimeout(function () {
 		w.parentNode.removeChild(w);
@@ -77,7 +77,7 @@ var initWindow = function (w) {
 		fullscreenButton.addEventListener("click", handleFullscreen, false);
 	}
 	w.addEventListener("mousedown", function (e) {
-		let w = e.srcElement.closest('.window');
+		var w = e.srcElement.closest('.window');
 		activeWindow = w;
 		topZIndex += 1;
 		w.style.zIndex = topZIndex;

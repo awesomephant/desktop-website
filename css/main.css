@@ -923,6 +923,10 @@ p[contenteditable] {
   -ms-flex-preferred-size: 10%;
       flex-basis: 10%; }
 
+* {
+  -webkit-transition: 300ms;
+  transition: 300ms; }
+
 .eye-blue {
   fill: #268Aff;
   stroke: #141414; }
