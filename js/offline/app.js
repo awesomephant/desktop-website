@@ -198,10 +198,9 @@ var trackEye = function (el, x, y) {
 };
 
 window.setInterval(function () {
-    var x = getRandomInt(0, 1000);
-    var y = getRandomInt(0, 1000);
-
+    var x = getRandomInt(0, 700);
+    var y = getRandomInt(0, 700);
     for (var i = 0; i < eyes.length; i++) {
         trackEye(eyes[i], x,y);
     }
-}, 2000);
+}, 1400);

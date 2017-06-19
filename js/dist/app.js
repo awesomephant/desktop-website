@@ -225,10 +225,10 @@ var initPeopleList = function (el) {
             person.imageCount = person.ImageCount * 1;
             person.images = [];
             for (var i = 0; i < person.imageCount; i++) {
-                person.images.push('./assets/work/' + person.Name.toLowerCase().replace(' ', '') + '-' + i + '.jpg')
+                person.images.push('./assets/work/' + person.Name.toLowerCase().replace(/ /g, '') + '-' + i + '.jpg')
             }
             console.log(person)
-            var personTemplate = Handlebars.compile('{{#if title}}<h2>{{title}}</h2>{{/if}}{{#each images}}<img src="{{this}}"/>{{/each}}{{#if Website}}<a class="window-button" href="{{Website}}">Website</a>{{/if}}{{#if Instagram}}<a class="window-button" href="http://www.instagram.com/{{Instagram}}">Instagram</a>{{/if}}{{#if Twitter}}<a class="window-button" href="http://www.twitter.com/{{Twitter}}">Twitter</a>{{/if}}')
+            var personTemplate = Handlebars.compile('{{#if title}}<h2>{{title}}</h2>{{/if}}{{#if description}}<p>{{description}}</p>{{/if}}{{#each images}}<img src="{{this}}"/>{{/each}}{{#if Website}}<a class="window-button" href="{{Website}}">Website</a>{{/if}}{{#if Instagram}}<a class="window-button" href="http://www.instagram.com/{{Instagram}}">Instagram</a>{{/if}}{{#if Twitter}}<a class="window-button" href="http://www.twitter.com/{{Twitter}}">Twitter</a>{{/if}}')
             var html = personTemplate(person);
             spawnWindow({
                 title: person.Name,
