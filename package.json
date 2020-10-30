@@ -15,5 +15,8 @@
     "autoprefixer": "*",
     "css-spring": "*",
     "csvtojson": "*"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
   }
 }

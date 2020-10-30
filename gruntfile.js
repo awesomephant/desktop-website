@@ -1,3 +1,4 @@
+const sass = require('node-sass');
 module.exports = function (grunt) {
 
     grunt.initConfig({
@@ -10,7 +11,8 @@ module.exports = function (grunt) {
         },
         sass: {
             options: {
-                sourceMap: true
+                sourceMap: true,
+                implementation: sass
             },
             dist: {
                 files: {
@@ -20,9 +22,6 @@ module.exports = function (grunt) {
         },
         postcss: {
             options: {
-                processors: [
-                    require('autoprefixer')({ browsers: 'last 2 versions' }), // add vendor prefixes
-                ]
             },
             dist: {
                 src: 'css/*.css'
